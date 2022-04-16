@@ -9,17 +9,20 @@
 }
 
 .navbar {
-    border-bottom: 1px solid var(--home-border-color);
-    border-image-slice: 10%;
+    justify-content: flex-start
 }
 
-.navbar--fixed-top {
+.input-group{
+    flex-wrap: nowrap;
+}
+
+/* .navbar--fixed-top {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: var(--ifm-z-index-fixed);
     border:1px solid rgb(20, 9, 9);
-}
+} */
 
 .inner{
     display: flex;
@@ -203,11 +206,33 @@ a {
 
 /* flex布局的开始 */
 /* 平板界面 */
-@media screen and (max-width: 900px) {
+
+
+@media screen and (max-width: 1399px) and (min-height: 720px){
     .myflex{
         flex-direction: column;
         justify-content: center;
         margin-top: 2rem;
+        width: 100%;
+    }
+    .intro{
+        align-items: center;
+        margin-top: 1rem;
+        width: 50%;
+        margin-left: 2rem;
+    }
+    .doc-btn_gVIP{
+        align-items: center;
+        margin-top: 6rem;
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 1399px) and (min-height: 1200px){
+    .myflex{
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 5rem;
         width: 100%;
     }
     .intro{
@@ -218,7 +243,7 @@ a {
     }
     .doc-btn_gVIP{
         align-items: center;
-        margin-top: 5rem;
+        margin-top: 8rem;
         width: 50%;
     }
 }
